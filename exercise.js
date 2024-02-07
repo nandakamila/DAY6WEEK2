@@ -17,7 +17,7 @@
             ● Average
 */
 
-class student {
+class CalculateData {
     constructor() {}
 
     static highestScore(array) {
@@ -81,13 +81,13 @@ students = {
     score:[82,68,97,36]
 }
 
-console.log(`The highest score is ${student.highestScore(students.score)}`);
-console.log(`The lowest score is ${student.lowestScore(students.score)}`);
-console.log(`The average score is ${student.averageScore(students.score)}`);
+console.log(`The highest score is ${CalculateData.highestScore(students.score)}`);
+console.log(`The lowest score is ${CalculateData.lowestScore(students.score)}`);
+console.log(`The average score is ${CalculateData.averageScore(students.score)}`);
 
-console.log(`The oldest is ${student.sortAge('oldest', students.age, students.name)}`);
-console.log(`The youngest is ${student.sortAge('youngest', students.age, students.name)}`);
-console.log(`The average age is ${student.averageAge(students.age)}`);
+console.log(`The oldest is ${CalculateData.sortAge('oldest', students.age, students.name)}`);
+console.log(`The youngest is ${CalculateData.sortAge('youngest', students.age, students.name)}`);
+console.log(`The average age is ${CalculateData.averageAge(students.age)}`);
 
 /*
 2. Create a program to create transaction
@@ -106,14 +106,14 @@ console.log(`The average age is ${student.averageAge(students.age)}`);
         ○ Checkout method → Finalize transaction, return transaction data
 */
 
-class product {
+class Product {
     constructor(name, price) {
         this.name = name;
         this.price = price;
     }
 }
 
-class transaction {
+class Transaction {
     constructor() {
         this.total = 0;
         this.products = [];
@@ -143,11 +143,11 @@ class transaction {
 
 }
 
-const kerang = new product("Kerang", 25000);
-const kepiting = new product("Kepiting", 90000);
-const udang = new product("Udang", 45000);
+const kerang = new Product("Kerang", 25000);
+const kepiting = new Product("Kepiting", 90000);
+const udang = new Product("Udang", 45000);
 
-const newTransaction = new transaction();
+const newTransaction = new Transaction();
 newTransaction.addToCart(kerang, 4);
 
 newTransaction.showTotal();
