@@ -138,7 +138,7 @@ class Transaction {
             total: this.total,
             products: this.products,
         };
-        return transactionData;
+        return console.log(transactionData);
     }
 
 }
@@ -149,8 +149,8 @@ const udang = new Product("Udang", 45000);
 
 const newTransaction = new Transaction();
 newTransaction.addToCart(kerang, 4);
+newTransaction.addToCart(kepiting, 4);
 
 newTransaction.showTotal();
 
-const completedTransaction = newTransaction.checkout();
-console.log(completedTransaction);
+newTransaction.checkout();
